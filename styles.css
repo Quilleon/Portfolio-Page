@@ -58,7 +58,7 @@ p {
 /* #region Classes */
 
 .border {
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
 .link-button {
@@ -70,7 +70,7 @@ p {
 
     height: 2rem;
     padding: 0 1rem;
-    /* width: 5rem; */
+    min-width: 5rem;
     /* border: 1px solid black; */
     border-radius: .25rem;
 
@@ -168,6 +168,9 @@ p {
     align-self: center;
 
 }
+.body-content.one.test h1{font-size: 4rem; margin: 2rem;}
+.body-content.one.test p{font-size: 1.2rem; color: rgb(180, 180, 180);}
+
 .introduction-box {
     /* border: 1px solid black; */
 
@@ -178,12 +181,12 @@ p {
 }
 .textbox {
     /* border: 1px solid black; */
-    margin: 0rem 1rem;
+    /* margin: 0rem 1rem; */
 
     /* height: 25rem; */
     width: 50rem;
 
-    /* justify-items: center; */
+    justify-items: center;
 }
 
 .textbox div {
@@ -217,11 +220,13 @@ p {
 
     justify-self: center;
 }
+.body-content.two.test {min-width: 60rem; justify-self: center; display: grid; grid-template-columns: 15rem 45rem; grid-template-rows: auto;}
+.column-two{max-width: 45rem;}
 
 .showcase-textarea {
-    max-width: 60rem;
+    /* max-width: 60rem; */
 
-    justify-self: center; 
+    /* justify-self: center;  */
 }
 
 .showcase-textarea h1 {
@@ -229,27 +234,36 @@ p {
 
     justify-self: center;
 }
+.showcase-textarea.test h1{ font-size: 2rem; justify-self: baseline;}
+.showcase-textarea.test p{font-size: 1rem; }
 
 .showcase-textarea p {
     color: #BADEFC;
     font-size: 1.5rem;
-
 }
 
 /* #region Project Card */
 .project-card-showcase {
-    /* border: 1px solid black; */
-    display:grid;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* gap: 1rem; */
+    
+    width: 48rem;
+    /* width: 60rem; */
+    /* height: auto; */
+
+    /* grid-auto-flow: row; */
+    /* grid-template-columns: repeat(3, 1fr); */
 }
+.project-card-info {grid-column: span 3; margin-left: 1rem; background-color:white; width: 45rem; height: 20rem;}
 .project-card {
-    margin: 1rem;
+    /* margin: 1rem; */
 
     background-color: #242832;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
 
     /* 4/5, 30/22.5*/
     height: 35rem;
@@ -258,8 +272,9 @@ p {
     /* border: 2px solid black; */
     border-radius: .5rem;
 
-    overflow: hidden; /* Hides any children visible outside the boundaries of the box, works like a clipping mask. */
+    overflow: hidden; /*Hides any children visible outside the boundaries of the box, works like a clipping mask.*/
 }
+.project-card.test {margin-top: 1rem; margin-left: 1rem; min-height: 20rem; max-height: 20rem; min-width: 15rem; max-width: 15rem;}
 .pc-banner {
     /* position:; */
     height: 60%;
